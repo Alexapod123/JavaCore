@@ -17,12 +17,11 @@ public class Task_1 {
         System.out.println(countEvens(array));
     }
 
-    public static int[] generateArray(int[] arr){
+    public static void generateArray(int[] arr){
         Random rand = new Random();
         for (int i = 0; i < arr.length; i++) {
             arr[i] = rand.nextInt(100);
         }
-        return arr;
     }
     public static int countEvens(int[] arr){
         int count =0;
