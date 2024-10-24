@@ -6,10 +6,9 @@
 package dz_2;
 
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.Random;
 
-public class Task2 {
+public class Task_2 {
     public static void main(String[] args) {
         int length = 10;
         int[] array = new int [length];
