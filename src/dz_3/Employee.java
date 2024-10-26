@@ -13,14 +13,15 @@ public class Employee {
     private String surname;
     private LocalDate birthday;
     private String position;
-    private String salary;
+    private double salary;
 
-    public Employee(String salary, String position, LocalDate birthday, String surname, String name) {
-        this.salary = salary;
-        this.position = position;
-        this.birthday = birthday;
-        this.surname = surname;
+
+    public Employee(String name, String surname, LocalDate birthday, String position, double salary) {
         this.name = name;
+        this.surname = surname;
+        this.birthday = birthday;
+        this.position = position;
+        this.salary = salary;
     }
 
     public String getName() {
@@ -55,11 +56,11 @@ public class Employee {
         this.position = position;
     }
 
-    public String getSalary() {
+    public double getSalary() {
         return salary;
     }
 
-    public void setSalary(String salary) {
+    public void setSalary(double salary) {
         this.salary = salary;
     }
     public static Comparator<Employee> birthdayCompare(){
