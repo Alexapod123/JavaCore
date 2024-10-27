@@ -3,6 +3,7 @@ package dz_3_4;
 import java.time.LocalDate;
 
 import static dz_3_4.Employee.birthdayCompare;
+import static dz_3_4.Holidays.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -17,5 +18,33 @@ public class Main {
         for (Employee employee: employees){
             System.out.println("Для сотрудника " + employee.getName()+ " " + employee.getPosition() + " зарплата после повышения на 20% составляет " + employee.getSalary());
         }
+
+
+        congratulation(employees, CurrentDate);
+    }
+
+
+    public static void congratulation(Employee[] employees, Holidays date){
+        if (date.getDay() == New_Year.getDay() && date.getMonth()==New_Year.getMonth()) {
+            for (Employee employee: employees) {
+                System.out.println("С Новым годом, " + employee.getName() + "!!!");
+            }
+        }
+        else if (date.getDay() == Defender_of_the_Fatherland_Day.getDay() && date.getMonth()== Defender_of_the_Fatherland_Day.getMonth()){
+            for (Employee employee: employees){
+                if (employee.getGender() == Gender.Male){
+                    System.out.println("С днем защитника Отечества, " + employee.getName() + "!!!");
+                }
+            }
+        }
+        else if (date.getDay() == International_Women_Day.getDay() && date.getMonth()== International_Women_Day.getMonth()){
+            for (Employee employee: employees){
+                if (employee.getGender() == Gender.Female){
+                    System.out.println("С Международным женским днем, " + employee.getName() + "!!!");
+                }
+            }
+        } else System.out.println("Сегодня непраздничный день!");
+
+
     }
 }
