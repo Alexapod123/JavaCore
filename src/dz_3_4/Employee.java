@@ -3,7 +3,7 @@
 сравнивающий две даты, представленные в виде трёх чисел гггг-мм-дд, без использования условного оператора.
  */
 
-package dz_3;
+package dz_3_4;
 
 import java.time.LocalDate;
 import java.util.Comparator;
@@ -14,15 +14,17 @@ public class Employee {
     private LocalDate birthday;
     private String position;
     private double salary;
+    private Gender gender;
 
-
-    public Employee(String name, String surname, LocalDate birthday, String position, double salary) {
+    public Employee(String name, String surname, Gender gender, LocalDate birthday, String position, double salary) {
         this.name = name;
         this.surname = surname;
+        this.gender = gender;
         this.birthday = birthday;
         this.position = position;
         this.salary = salary;
     }
+
 
     public String getName() {
         return name;
@@ -38,6 +40,14 @@ public class Employee {
 
     public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public Gender getGender() {
+        return gender;
+    }
+
+    public void setGender(Gender gender) {
+        this.gender = gender;
     }
 
     public LocalDate getBirthday() {
