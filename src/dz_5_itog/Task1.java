@@ -3,7 +3,7 @@ package dz_5_itog;
 import java.io.IOException;
 import java.nio.file.*;
 
-public class Main {
+public class Task1 {
     public static void main(String[] args) {
         try {
             createBackup("./src/dz_3_4", "./backup");
